@@ -1,18 +1,21 @@
 class UserFetchDto {
+  final int id; // Ensure this property exists
   final String name;
   final String idNo;
   final String imagePath;
 
-  UserFetchDto({required this.name, required this.idNo, required this.imagePath});
+  UserFetchDto({required this.id, required this.name, required this.idNo, required this.imagePath});
 
   factory UserFetchDto.fromJson(Map<String, dynamic> json) {
     return UserFetchDto(
+      id: json['id'],
       name: json['name'],
       idNo: json['idNo'],
       imagePath: json['imagePath'],
     );
   }
 }
+
 
 class HospitalVisitFetchDto {
   final UserFetchDto user;
