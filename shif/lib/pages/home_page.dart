@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
-import 'user_page.dart';
+import 'package:shif/pages/user_page.dart';
+import 'package:shif/pages/hospital_visit_page.dart'; // Import HospitalVisitPage
+import 'package:shif/pages/payment_plan_page.dart'; // Import PaymentPlanPage
+import 'package:shif/pages/payment_page.dart'; // Import PaymentPage
+import 'package:shif/pages/claims_page.dart'; // Import ClaimsPage
 
 class HomePage extends StatelessWidget {
   @override
@@ -33,28 +37,40 @@ class HomePage extends StatelessWidget {
                   label: 'Hospital Visit',
                   icon: Icons.local_hospital,
                   onTap: () {
-                    // Add navigation to Hospital Visit Page
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => HospitalVisitPage()),
+                    );
                   },
                 ),
                 TaskButton(
                   label: 'Claims',
                   icon: Icons.receipt_long,
                   onTap: () {
-                    // Add navigation to Claims Page
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ClaimsPage()),
+                    );
                   },
                 ),
                 TaskButton(
                   label: 'Payment Plan',
                   icon: Icons.payment,
                   onTap: () {
-                    // Add navigation to Payment Plan Page
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => PaymentPlanPage()),
+                    );
                   },
                 ),
                 TaskButton(
                   label: 'Payment',
                   icon: Icons.credit_card,
                   onTap: () {
-                    // Add navigation to Payment Page
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => PaymentPage()),
+                    );
                   },
                 ),
               ],
