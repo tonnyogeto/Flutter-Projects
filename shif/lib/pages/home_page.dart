@@ -4,6 +4,7 @@ import 'package:shif/pages/hospital_visit_page.dart'; // Import HospitalVisitPag
 import 'package:shif/pages/payment_plan_page.dart'; // Import PaymentPlanPage
 import 'package:shif/pages/payment_page.dart'; // Import PaymentPage
 import 'package:shif/pages/claims_page.dart'; // Import ClaimsPage
+import 'package:shif/pages/report_page.dart'; // Import ReportPage
 
 class HomePage extends StatelessWidget {
   @override
@@ -70,6 +71,16 @@ class HomePage extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => PaymentPage()),
+                    );
+                  },
+                ),
+                TaskButton(
+                  label: 'Report',  // Add a button for Report
+                  icon: Icons.report,
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ReportPage()),
                     );
                   },
                 ),
